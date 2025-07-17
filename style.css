@@ -235,6 +235,63 @@ section{
     font-weight: 700;
     border: 2px green;
 }
+/* ...existing code... */
+
+/* Creative Certificates Section */
+.certify .img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    padding: 40px 0;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.25);
+}
+
+.certify .img img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1.5px 8px #D4AF37;
+    background: #fff;
+    transition: 
+        transform 0.4s cubic-bezier(.4,2,.3,1),
+        box-shadow 0.4s cubic-bezier(.4,2,.3,1),
+        z-index 0s;
+    cursor: pointer;
+    z-index: 1;
+    border: 3px solid transparent;
+}
+
+.certify .img img:hover {
+    transform: scale(1.5) rotate(-2deg);
+    box-shadow: 0 12px 48px 0 #D4AF37, 0 2px 16px #fff;
+    border: 3px solid var(--highlight--);
+    z-index: 10;
+    position: relative;
+    filter: brightness(1.08) contrast(1.1);
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+    .certify .img {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 20px 0;
+    }
+    .certify .img img {
+        width: 90vw;
+        height: auto;
+        max-width: 340px;
+    }
+}
+
+/* ...existing code... */
 .contact{
     font-size: 3.5rem;
     margin: 23px 0;
