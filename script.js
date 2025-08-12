@@ -49,3 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
     upArrow.addEventListener('click', handleUpClick);
     downArrow.addEventListener('click', handleDownClick);
 });
+const chatToggle = document.getElementById('chat-toggle');
+const chatWindow = document.getElementById('chat-window');
+
+chatToggle.addEventListener('click', () => {
+  chatWindow.style.display =
+    chatWindow.style.display === 'none' || chatWindow.style.display === ''
+      ? 'block'
+      : 'none';
+});
